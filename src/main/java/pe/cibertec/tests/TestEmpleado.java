@@ -22,18 +22,20 @@ public class TestEmpleado {
 		
 		Empleado emp1 = new Empleado(1L, "Mejia Rojas", "Julio Edgar", new GregorianCalendar(1987,10,10).getTime());
 		Empleado emp2 = new Empleado(2L, "Mejias Rojas", "Ju Edgar", new GregorianCalendar(1987,10,10).getTime());
+		Empleado emp3 = new Empleado(3L, "Mesias Rosas", "Juanjo Edgar", new GregorianCalendar(1987,10,10).getTime());
 		
-		insertarEmpleado(emp1, emp2);
+		insertarEmpleado(emp1);
+		insertarEmpleado(emp2);
+		insertarEmpleado(emp3);
 		
 		List<Empleado> empleados = manager.createQuery("from Empleado e").getResultList();
 		mostrarEmpleados(empleados);
 		
 	}
 
-	private static void insertarEmpleado(Empleado emp1, Empleado emp2) {
+	private static void insertarEmpleado(Empleado emp) {
 		manager.getTransaction().begin();
-		manager.persist(emp1);
-		manager.persist(emp2);
+		manager.persist(emp);
 		manager.getTransaction().commit();
 //		manager.close();
 	}
