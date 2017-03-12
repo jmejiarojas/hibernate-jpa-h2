@@ -1,4 +1,4 @@
-package modelo;
+package pe.cibertec.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
