@@ -1,7 +1,7 @@
 package pe.cibertec.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,13 +28,13 @@ public class Empleado implements Serializable {
 	private String nombres;
 
 	@Column(name = "FECHA_NACIMIENTO")
-	private Date fechaNacimiento;
+	private LocalDate fechaNacimiento;
 
 	public Empleado() {
 		
 	}
 
-	public Empleado(Long codigo, String apellidos, String nombres, Date fechaNacimiento) {
+	public Empleado(Long codigo, String apellidos, String nombres, LocalDate fechaNacimiento) {
 		this.codigo = codigo;
 		this.apellidos = apellidos;
 		this.nombres = nombres;
@@ -65,11 +65,11 @@ public class Empleado implements Serializable {
 		this.nombres = nombres;
 	}
 
-	public Date getFechaNacimiento() {
+	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
