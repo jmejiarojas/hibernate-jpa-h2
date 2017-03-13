@@ -1,6 +1,7 @@
 package pe.cibertec.tests;
 
 import java.time.LocalDate;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -19,10 +20,10 @@ public class TestEmpleado {
 
 		//EntityManager manager = factory.createEntityManager();
 
-		Empleado emp1 = new Empleado(1L, "Mejia Rojas", "Julio Edgar", new GregorianCalendar(1987, 10, 10).getTime());
-		Empleado emp2 = new Empleado(2L, "Mejias Rojas", "Ju Edgar", new GregorianCalendar(1987, 10, 10).getTime());
-		Empleado emp3 = new Empleado(3L, "Mesias Rosas", "Juanjo Edgar", new GregorianCalendar(1987, 10, 10).getTime());
-		Empleado emp4 = new Empleado(4L, "Castillo Ore", "Magaly", new GregorianCalendar(1987, 10, 10).getTime());
+		Empleado emp1 = new Empleado(1L, "Mejia Rojas", "Julio Edgar", LocalDate.of(1987, 10, 4));
+		Empleado emp2 = new Empleado(2L, "Mejias Rojas", "Ju Edgar", LocalDate.of(1987, 10, 4));
+		Empleado emp3 = new Empleado(3L, "Mesias Rosas", "Juanjo Edgar", LocalDate.of(1987, 10, 4));
+		Empleado emp4 = new Empleado(4L, "Castillo Ore", "Magaly", LocalDate.of(1987, 10, 4));
 		
 		//Direccion direccion = new Direccion(1L, "calle 123", "Los Olivos", "Lima", "Peru");
 		
