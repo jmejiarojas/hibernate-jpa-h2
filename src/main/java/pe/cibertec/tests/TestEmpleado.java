@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import pe.cibertec.modelo.Direccion;
 import pe.cibertec.modelo.Empleado;
 
 public class TestEmpleado {
@@ -21,10 +22,22 @@ public class TestEmpleado {
 		Empleado emp1 = new Empleado(1L, "Mejia Rojas", "Julio Edgar", new GregorianCalendar(1987, 10, 10).getTime());
 		Empleado emp2 = new Empleado(2L, "Mejias Rojas", "Ju Edgar", new GregorianCalendar(1987, 10, 10).getTime());
 		Empleado emp3 = new Empleado(3L, "Mesias Rosas", "Juanjo Edgar", new GregorianCalendar(1987, 10, 10).getTime());
-
+		Empleado emp4 = new Empleado(4L, "Castillo Ore", "Magaly", new GregorianCalendar(1987, 10, 10).getTime());
+		
+		//Direccion direccion = new Direccion(1L, "calle 123", "Los Olivos", "Lima", "Peru");
+		
+//		EntityManager manager = factory.createEntityManager();
+//		manager.getTransaction().begin();
+//		manager.persist(direccion);
+//		manager.getTransaction().commit();
+		
+		emp4.setDireccion(new Direccion(1L, "calle 123", "Los Olivos", "Lima", "Peru"));
+		//emp4.setDireccion(direccion);
+		
 		insertarEmpleado(emp1);
 		insertarEmpleado(emp2);
 		insertarEmpleado(emp3);
+		insertarEmpleado(emp4);
 
 		mostrarEmpleados();
 
